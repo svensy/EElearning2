@@ -1,0 +1,52 @@
+<html ng-app="QuizApp">
+  <head>
+    <title>Quiz App</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="libs/bower_components/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="libs/bower_components/animate.css">
+    <link rel="stylesheet" href="libs/bower_components/angular-ui-notification/dist/angular-ui-notification.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="libs/bower_components/angular/angular.min.js"></script>
+    <script src="libs/angular-ui-router.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="libs/bower_components/semantic/dist/semantic.min.js"></script>
+
+    <script src="libs/bower_components/angular-ui-notification/dist/angular-ui-notification.min.js"> </script>
+    <script src="app.js"></script>
+
+  </head>
+  <body  >
+      <header ng-controller="HeaderCtrl">
+        <div ng-include="'components/Shared/header.html'"> </div>
+      </header>
+
+      <div class="ui grid container " >
+        <div class="row">
+
+            <div class="four wide column" ui-view="aside" > </div>
+            <div class="twelve wide column" ui-view="content"> </div>
+        </div>
+      </div>
+    
+    <script src="components/Utility/utility.js"></script>
+    <script src="components/Shared/HeaderCtrl.js"></script> 
+    <script src="components/Subjects/SubjectsCtrl.js"></script>   
+    <script src="components/Subjects/SubjectsService.js"></script>
+    <script src="components/Quizzes/QuizzesCtrl.js"></script>
+    <script src="components/Quizzes/QuizzesService.js"></script>
+    <script src="components/Users/UserProfileCtrl.js"></script>
+    <script src="components/Questions/QuestionsCtrl.js"></script>
+    <script src="components/Questions/QuestionsService.js"></script>
+    <script src="components/Auth/LoginController.js"></script>
+    <script src="components/Auth/RegisterController.js"></script>
+    <script src="components/Auth/AuthService.js"></script>
+    <script src="components/Auth/LocalStorageService.js"></script>
+    <script src="components/Auth/CurrentUserService.js"></script>
+    <script src="components/Auth/FacebookController.js"></script>
+    <script src="components/LeaderBoard/leaderBoardCtrl.js"></script>
+  </body>
+</html>

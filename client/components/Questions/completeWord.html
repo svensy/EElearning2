@@ -1,0 +1,41 @@
+<div class="question-container animated fadeInRight"  >
+  <div class="ui cards one wide column  "  >
+
+    <div class="card" style="background-color: ; border: 5px solid green; box-shadow: 12px 12px 5px #888888;">
+      <div class="content">
+        <div class="header"> Question {{question.id}}
+
+          <span class="point"> +{{question.point}} </span>
+        </div>
+        
+        <div class="description">
+          {{question.description}}
+        </div>
+      </div>
+      
+      
+
+     <form name="answer-form" class="ui form" style="margin: 5% 0 5% 15%;">
+      <!-- <div class="grouped fields">
+        <label>Your answer?</label>
+        <div class="field" ng-repeat="answer in question.answers">
+          <div class="ui radio checkbox">
+            <input type="radio" name="multiChoice" ng-click="checked($index)">
+            <label> {{answer.content}}</label>
+          </div>
+        </div>
+      
+      </div> -->
+      <input type="text" style="width: 90%;" ng-model="question.answerUser">
+    </form>
+
+  </div>
+  <div class="card" ng-show="!question.done" >
+    <button class="ui  blue tiny button"  ng-click="checkCompleteWordResult($index)">Next</button>
+  </div>
+
+<br>
+<br>
+<br>
+</div>
+</div>

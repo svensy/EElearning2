@@ -1,0 +1,109 @@
+<div class="header-container" style="overflow:hidden">
+  <a ui-sref="home.subjects"><img src="/assets/imgs/QuizUp_Logo.png" alt="Logo" class="logo-img"> </a>
+  <div class="btn-header" style="float: right;">
+
+  <div class="ui buttons " ng-if="!currentUser()">
+<!--     <button class="ui blue button"  style="margin-right: 5px;" >Register</button>
+<button class="ui blue button"   style="margin-right: 5px;">Login</button> -->
+    
+    <div class="ui buttons">
+    <button class="ui positive button" ng-click="signupButton()">Sign up</button>
+      <div class="or"></div>
+      <button class="ui positive button" ng-click="loginButton()">Log in</button>
+    </div>
+
+      <div class="ui small signup modal" ng-controller="RegisterCtrl">
+        <div class="header" style="text-align: center; color: teal;"><h1>Sign-up</h1></div>
+        <div class="content">
+
+          <form class = "form-sign-up">
+            <div class="ui labeled input" style="width: 100%; ">
+              <div class="ui label" style="width: 120px; background-color: blue; color: white;">
+                Email:
+              </div>
+              <input type="text" placeholder="..." ng-model="user.email" >
+            </div>
+
+            <br>
+            <br>
+
+            <div class="ui labeled input" style="width: 100%; ">
+              <div class="ui label" style="width: 120px; background-color: blue; color: white;">
+                Name:
+              </div>
+              <input type="text" placeholder="..." ng-model="user.name" >
+            </div>
+
+            <br>
+            <br>
+            <div class="ui labeled input" style="width: 100%; ">
+              <div class="ui label" style="width: 120px; background-color: blue; color: white;">
+                Password:
+              </div>
+              <input type="password" placeholder="..." ng-model="user.password" >
+            </div>
+
+            <br>
+            <br>
+            <div class="ui labeled input" style="width: 100%;">
+              <div class="ui label" style="width: 120px; background-color: blue; color: white;">
+                Confirmation:
+              </div>
+              <input type="password" placeholder="..." ng-model="user.password_confirmation">
+            </div>
+            <br>
+            <br>
+
+            <button class="ui positive button " style="width: 100%;" ng-click="register()">SIGN UP</button>
+            <br>
+            <br>
+          </form>
+
+        </div>  
+      </div>
+
+      <div class="ui small login modal" ng-controller="LoginCtrl">
+       <div class="header" style="text-align: center;color: teal;"><h1>Log-in</h1></div>
+       <div class="content">
+
+        <form class = "form-sign-up">
+          <div class="ui labeled input" style="width: 100%; ">
+            <div class="ui label" style="width: 120px; background-color: blue; color: white;">
+              Email:
+            </div>
+            <input type="text" placeholder="..." ng-model="user.email">
+          </div>
+
+          <br>
+          <br>
+          <div class="ui labeled input" style="width: 100%;">
+            <div class="ui label" style="width: 120px; background-color: blue; color: white;">
+              Password:
+            </div>
+            <input type="password" placeholder="..." ng-model="user.password">
+          </div>
+          <br>
+          <br>
+
+          <button class="ui positive button " style="width: 100%;" ng-click="login()">LOG IN</button>
+          <br>
+          <br>
+          <br>
+          <br>
+          <button class="ui facebook button" ng-controller="FacebookCtrl" ng-click="fbLogin()" style="width: 100%;">
+            <i class="facebook icon"></i>
+            Facebook
+          </button>
+        </form>
+
+
+      </div>  
+
+    </div>
+  </div>
+  <div ng-if="currentUser()">
+    <button class="ui button orange" ng-click="logout()">Logout</button>
+  </div>
+</div>
+</div>
+

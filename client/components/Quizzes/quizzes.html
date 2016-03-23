@@ -1,0 +1,14 @@
+
+<div class="ui cards three wide column animated slideInUp">
+ <a ng-repeat="quiz in quizzes" class="card" style=" border: 5px solid green;" ui-sref="home.quizzes.questions({quiz: {{quiz.id}}})" >
+
+    <div class="content">
+      <div class="header"> {{quiz.name}}</div>
+      <div class="description">
+    
+      </div>
+    </div>
+  </a>
+
+
+</div>

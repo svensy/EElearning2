@@ -1,0 +1,107 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #424242;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0; 
+}
+
+header, nav, footer, section, article, div {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside {
+
+}
+
+header {
+	margin: auto;
+	height: 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	margin-bottom: 3em;
+}
+
+.header-container {
+  width: 94%;
+  height: 60px;
+  margin: 0 0 0 6%;
+}
+
+.logo-img {
+  width: 150px;
+  height: 50px;
+  margin: 5px;
+}
+
+.btn-header {
+  margin: 0.8em;
+}
+.user_profile{
+    border-right: 1px solid #888;
+}
+
+.user-input-form{
+  width: 92%;
+}
+
+.point {
+  float: right;
+  border: 1px solid green;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: green;
+  color: white;
+}
+
+.question-container {
+  width: 60%;
+  margin: 0 20% 0 10%;
+}
+
+.modal-config {
+  font-size: 50px;
+  background-color: blue;
+  color: white;
+}
+
+
+
+  @media screen and (min-width: 320px){
+    .form-sign-up {
+      width: 100%;
+
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    .form-sign-up {
+      width: 50%;
+      margin: auto;
+    }
+  }
+
+
+.result-point {
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 40%;
+}
+
